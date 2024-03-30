@@ -34,7 +34,7 @@ class Character:
     def set_potion(self, potion):
         self.potion = potion
 
-class DragonCaveGame:
+class PortalDragonGame:
     def __init__(self):
         self.naga_baik = random.randint(1, 2)
         self.naga_jahat = 2 if self.naga_baik == 1 else 1
@@ -44,18 +44,22 @@ class DragonCaveGame:
         self.naga = Character(2000, 0)
 
     def play(self):
-        print("Kamu melihat dua gua di depanmu ...")
+        print("Kamu melihat dua portal di depanmu ...")
         time.sleep(1)
-        gua = int(input("Apakah kamu memilih gua 1 atau 2?"))
+        portal = int(input("Apakah kamu memilih portal 1 atau 2?"))
 
-        if gua == self.naga_baik:
-            print("Gua ini gelap dan menakutkan…")
+        if portal == self.naga_baik:
+            print("Portal ini sangat gelap, kamu tidak bisa melihat apa-apa")
             time.sleep(1)
-            print("Seekor naga besar muncul di depanmu! Ia membuka mulutnya dan...")
+            print("Kamu mendengar ada suara langkah yang datang ke arahmu")
+            time.sleep(1)
+            print("Tiba-tiba ada sesosok naga HITAM yang berdiri dihadapanmu")
+            time.sleep(1)
+            print("Naga tersebut membuka mulutnya dan...")
             time.sleep(1)
             print("Isi mulutnya berisi harta yang ingin dibagikan kepadamu, selamat kamu menemukan naga yang ramah")
 
-        elif gua == self.naga_jahat:
+        elif portal == self.naga_jahat:
             print("Naga itu mengeluarkan api dari mulutnya, dan kau hampir saja kena")
             time.sleep(1)
             decision = input("Apakah kau akan 'kabur' atau 'melawan' naga itu?")
@@ -101,5 +105,5 @@ class DragonCaveGame:
                 if self.naga.get_hp() <= 0:
                     print("SELAMAT, kau mengalahkan si naga dan mendapat harta si naga jahat")
 
-game = DragonCaveGame()
+game = PortalDragonGame()
 game.play()
