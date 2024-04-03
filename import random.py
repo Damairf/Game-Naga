@@ -60,7 +60,7 @@ class PortalDragonGame:
             print("Isi mulutnya berisi harta yang ingin dibagikan kepadamu, selamat kamu menemukan naga yang ramah")
 
         elif portal == self.naga_jahat:
-            print("Naga itu mengeluarkan api dari mulutnya, dan kau hampir saja kena")
+            print("Di dalam portal tersebut tedapat naga HITAM yang datang menghampirimu dengan tatapan penuh amarah")
             time.sleep(1)
             decision = input("Apakah kau akan 'kabur' atau 'melawan' naga itu?")
 
@@ -75,7 +75,7 @@ class PortalDragonGame:
                 time.sleep(1)
 
                 while self.naga.get_hp() > 0 and self.player.get_hp() > 0:
-                    print("GUA NAGA:", self.naga.get_hp())
+                    print("Ender Dragon:", self.naga.get_hp())
                     print("Kau memiliki HP:", self.player.get_hp(), "dan jumlah potion", self.player.get_potion())
 
                     battle = int(input("1.Serang 2.Minum potion"))
@@ -96,14 +96,14 @@ class PortalDragonGame:
                             print("BERUNTUNG SEKALI! Naga itu meleset")
 
                 if self.player.get_hp() <= 0:
-                    print("SIAL, kau telah dikalahkan oleh sang Gua Naga")
+                    print("Sayang sekali kamu telah dikalahkan oleh sang Ender Dragon")
                     if self.naga.get_hp() < 300:
                         print("Padahal kamu hampir mengalahkannya")
                     time.sleep(1)
                     print("GAME OVER")
 
                 if self.naga.get_hp() <= 0:
-                    print("SELAMAT, kau mengalahkan si naga dan mendapat harta si naga jahat")
+                    print("SELAMAT kamu mengalahkan sang Ender Dragon dan mendapat telur Ender Dragon")
 
 game = PortalDragonGame()
 game.play()
