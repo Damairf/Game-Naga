@@ -68,7 +68,7 @@ class PortalDragonGame:
                 if self.kesempatan_kabur >= 24:
                     print("Kamu berhasil kabur dari sergapan naga jahat itu")
                 else:
-                    print("Naga itu berhasil menangkapmu dan kau dibunuh")
+                    print("Naga itu berhasil menangkapmu dan kamu dibunuh")
                     return
             elif decision == "melawan":
                 print("Sepertinya pedang yang kamu bawa berguna juga")
@@ -104,6 +104,27 @@ class PortalDragonGame:
 
                 if self.naga.get_hp() <= 0:
                     print("SELAMAT kamu mengalahkan sang Ender Dragon dan mendapat telur Ender Dragon")
+                    time.sleep(1)
+                    print("Portal untuk kembali pulang terbuka, tetapi di pulau seberang terdapat sayap yang dapat membuatmu terbang")
+                    time.sleep(1)
+                    decision = input("Apakah kamu ingin 'mengambil' atau 'pulang' ke rumahmu?")
+                    
+                    if decision == "mengambil":
+                        print("Kamu pergi mencoba untuk mengambil sayap tersebut")
+                        time.sleep(1)
+                        print("Dan kamu berhasil mendapatkan sayap itu")
+                        time.sleep(1)
+                        print("Kamu pun terbang menggunakan sayap tersebut menuju portal pulang")
+                        time.sleep(1)
+                        print("Selamat kamu berhasil keluar dari portal end dengan membawa sayap")
+                        time.sleep(1)
+                        print("Membawa Kabur telur: +60 exp")
+                        print("Membawa Kabur sayap: +40 exp")
+                    else:
+                        print("Kamu berhasil keluar dari portal end tetapi tidak mengambil sayap")
+                        time.sleep(1)
+                        print("Membawa kabur telur: +60 exp")
+                        time.sleep(1)
 
 game = PortalDragonGame()
 game.play()
